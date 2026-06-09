@@ -61,7 +61,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <title>Fully Open Meditron: An Auditable Pipeline for Clinical LLMs | Academic Research</title>
@@ -70,30 +69,19 @@
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
   
-  <!-- Critical CSS - Load synchronously -->
+  <!-- CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- Fonts (Hippocrates style) -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+  <!-- JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
@@ -107,309 +95,193 @@
     "headline": "Fully Open Meditron: An Auditable Pipeline for Clinical LLMs",
     "description": "The first fully open pipeline for building clinical LLMs, comprising a clinician-audited training corpus, a reproducible data construction and training framework, and a use-aligned evaluation protocol.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "Xavier Theimer-Lienhard",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "EPFL"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Mushtaha El-Amin",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "EPFL"
-        }
-      }
+      { "@type": "Person", "name": "Xavier Theimer-Lienhard", "affiliation": { "@type": "Organization", "name": "EPFL" } },
+      { "@type": "Person", "name": "Mushtaha El-Amin", "affiliation": { "@type": "Organization", "name": "EPFL" } }
     ],
     "datePublished": "2026-05-15",
-    "publisher": {
-      "@type": "Organization",
-      "name": "arXiv"
-    },
+    "publisher": { "@type": "Organization", "name": "arXiv" },
     "url": "https://epfl-light.github.io/fully-open-meditron",
     "image": "https://epfl-light.github.io/fully-open-meditron/static/images/social_preview.png",
     "keywords": ["clinical LLM", "medical AI", "fully open models", "auditable pipeline", "machine learning"],
     "abstract": "Clinical decision support systems require scrutable, auditable pipelines that enable rigorous, reproducible validation. We introduce Fully Open Meditron, the first fully open pipeline for building LLM-CDSS, comprising a clinician-audited training corpus, a reproducible data construction and training framework, and a use-aligned evaluation protocol.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://epfl-light.github.io/fully-open-meditron"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Medical Large Language Models"
-      },
-      {
-        "@type": "Thing", 
-        "name": "Clinical Decision Support"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LiGHT Lab, EPFL",
-    "url": "https://www.epfl.ch",
-    "logo": "https://epfl-light.github.io/fully-open-meditron/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/EPFL_LiGHT",
-      "https://github.com/EPFLiGHT"
-    ]
+    "license": "https://creativecommons.org/licenses/by/4.0/"
   }
   </script>
 </head>
 <body>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="https://arxiv.org/abs/2311.16079" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Meditron-70B: Scaling Medical Pretraining for Large Language Models</h5>
-            <p>Open-weight medical LLM built on Llama 2 and scaled with curated clinical guidelines.</p>
-            <span class="work-venue">arXiv 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/2509.14233" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Apertus: Democratizing Open and Compliant LLMs</h5>
-            <p>A fully open base model satisfying all openness dimensions for global language environments.</p>
-            <span class="work-venue">arXiv 2025</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/2502.00000" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Llama-3-Meditron: An Open-Weight Suite of Medical LLMs</h5>
-            <p>Medical LLM suite based on Llama-3.1, introducing the MOOVE clinical evaluation platform.</p>
-            <span class="work-venue">AAAI Workshop 2025</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <main id="main-content">
+  <!-- Title / Hero -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Fully Open Meditron: An Auditable Pipeline for Clinical LLMs</h1>
+            <h1 class="title is-1 publication-title">
+              <style>
+                .logo {
+                  width: 1.5em;
+                  position: relative;
+                  top: -10px;
+                  left: -5px;
+                  vertical-align: middle;
+                }
+              </style>
+              <img src="static/images/MeditronFO-logo-cube.png" class="logo" alt="Logo">
+              Fully Open Meditron:<br>An Auditable Pipeline for Clinical LLMs
+            </h1>
+
             <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="mailto:xavier.theimer-lienhard@epfl.ch" target="_blank">Xavier Theimer-Lienhard</a>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Mushtaha El-Amin</a>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Fay Elhassan</a>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Sahaj Vaidya</a>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Victor Cartier-Negadi</a>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">David Sasu</a><sup>&dagger;</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Lars Klein</a><sup>&dagger;</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Mary-Anne Hartley</a><sup>&dagger;</sup>
-              </span>
+              <span class="author-block"><a href="mailto:xavier.theimer-lienhard@epfl.ch" target="_blank">Xavier Theimer-Lienhard</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Mushtaha El-Amin</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Fay Elhassan</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Sahaj Vaidya</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Victor Cartier-Negadi</a>,</span><br>
+              <span class="author-block"><a href="#" target="_blank">David Sasu</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Lars Klein</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Mary-Anne Hartley</a></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">LiGHT Lab, EPFL<br>arXiv preprint, May 2026</span>
-              <span class="eql-cntrb"><small><br><sup>&dagger;</sup>Indicates Equal Supervision</small></span>
+              <span class="author-block">LiGHT Lab, EPFL &nbsp;&bull;&nbsp; arXiv preprint, May 2026</span>
             </div>
+
+            <div class="column has-text-centered">
+              <span class="author-block">
+                <a href="mailto:xavier.theimer-lienhard@epfl.ch">xavier.theimer-lienhard@epfl.ch</a>
+              </span>
+            </div>
+
+            <!-- Big hero image right under the title (Hippocrates style) -->
+            <header style="text-align: center;">
+              <img src="static/images/plot_fig1_healthbench_timeline_easy_color.png" alt="HealthBench timeline" width="85%">
+            </header>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2605.16215.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://github.com/EPFLiGHT/FullyOpenMeditron" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
+                  <a href="https://arxiv.org/abs/2605.16215" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
                 </span>
-                <span>Code</span>
-              </a>
-            </span>
-
-            <span class="link-block">
-              <a href="https://huggingface.co/collections/EPFLiGHT/meditronfo" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fas fa-robot"></i>
-              </span>
-              <span>Models</span>
-            </a>
-          </span>
-
-          <span class="link-block">
-            <a href="https://huggingface.co/datasets/EPFLiGHT/fully-open-meditron" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fas fa-database"></i>
-            </span>
-            <span>Dataset</span>
-          </a>
-        </span>
-
-        <span class="link-block">
-          <a href="https://arxiv.org/abs/2605.16215" target="_blank"
-          class="external-link button is-normal is-rounded is-dark">
-          <span class="icon">
-            <i class="ai ai-arxiv"></i>
-          </span>
-          <span>arXiv</span>
-        </a>
-      </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/EPFLiGHT/meditronfo" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🤗</span>
+                    <span>Models</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/EPFLiGHT/fully-open-meditron" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Datasets</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/EPFLiGHT/FullyOpenMeditron" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser figure -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <!-- Abstract -->
+  <section class="hero">
     <div class="hero-body">
-      <img src="static/images/healthbench_evolution.png" alt="Evolution of medical LLM performance on HealthBench over time"/>
-      <h2 class="subtitle has-text-centered">
-        Evolution of medical LLM performance on HealthBench over time across closed-data, open-weight, and fully open models. While open-weight medical specialists have approached the performance of proprietary systems, no fully open medical specialist previously existed. Apertus-MeditronFO is the first, establishing a new state of the art among fully open systems.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser figure -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Clinical decision support systems (CDSS) require scrutable, auditable pipelines that enable rigorous, reproducible validation. Yet current LLM-based CDSS (LLM-CDSS) remain largely opaque. Most "open" models are open-weight only, releasing parameters while withholding the data provenance, curation procedures, and generation pipelines that determine model behavior. Fully Open (FO) models, which expose the complete training stack end-to-end, do not currently exist in medicine. We introduce <strong>Fully Open Meditron</strong>, the first fully open pipeline for building LLM-CDSS, comprising a clinician-audited training corpus, a reproducible data construction and training framework, and a use-aligned evaluation protocol.
-          </p>
-          <p>
-            The corpus unifies eight public medical QA datasets into a normalized conversational format and expands coverage with three clinician-vetted synthetic extensions: exam-style QA, guideline-grounded QA derived from 46,469 clinical practice guidelines, and clinical vignettes. The pipeline enforces system-wide decontamination to eliminate overlap with evaluation benchmarks, includes gold-label resampling of teacher generations, and end-to-end validation by a four-physician panel. We evaluate using an LLM-as-a-judge protocol over expert-written clinical vignettes, calibrated against 204 human raters, capturing open-ended clinical reasoning beyond typical multiple-choice benchmarks.
-          </p>
-          <p>
-            We apply the recipe to five FO base models (Apertus-70B/8B, OLMo-2-32B, EuroLLM-22B/9B). All MeditronFO variants are preferred over their bases in pair-wise clinical evaluation. Apertus-70B-MeditronFO improves +6.6 points over its base (47.2% &rarr; 53.8%) on aggregate medical benchmarks, establishing a new FO SoTA for LLM-CDSS. Additionally, Gemma-3-27B-MeditronFO is preferred over MedGemma in 58.6% of LLM-as-a-judge comparisons and outperforms it on HealthBench (58% vs 55.9%). These results show that fully open pipelines can achieve state-of-the-art domain-specific performance without sacrificing auditability or reproducibility.
-          </p>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Clinical decision support systems (CDSS) require scrutable, auditable pipelines that enable rigorous, reproducible validation. Yet current LLM-based CDSS (LLM-CDSS) remain largely opaque. Most "open" models are open-weight only, releasing parameters while withholding the data provenance, curation procedures, and generation pipelines that determine model behavior. Fully Open (FO) models, which expose the complete training stack end-to-end, do not currently exist in medicine. We introduce Fully Open Meditron, the first fully open pipeline for building LLM-CDSS, comprising a clinician-audited training corpus, a reproducible data construction and training framework, and a use-aligned evaluation protocol. The corpus unifies eight public medical QA datasets into a normalized conversational format and expands coverage with three clinician-vetted synthetic extensions: exam-style QA, guideline-grounded QA derived from 46,469 clinical practice guidelines, and clinical vignettes. We apply the recipe to five FO base models. Apertus-70B-MeditronFO improves +6.6 points over its base (47.2% to 53.8%) on aggregate medical benchmarks, establishing a new FO SoTA for LLM-CDSS, and Gemma-3-27B-MeditronFO surpasses MedGemma on HealthBench (58% vs 55.9%). These results show that fully open pipelines can achieve state-of-the-art domain-specific performance without sacrificing auditability or reproducibility.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/corpus_pipeline.png" alt="Fully Open Meditron Corpus construction pipeline" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          The corpus combines aggregated public medical QA, 46,469 clinical practice guidelines, and expert-written MOOVE vignettes, expanded via clinician-vetted synthetic generation.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/dataset_overview.png" alt="Overview of Fully Open Meditron datasets" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Overview of the Fully Open Meditron datasets by record count, with synthetic data accounting for ~64% of examples.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/automoove_results.png" alt="Auto-MOOVE pairwise preference results" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Auto-MOOVE pairwise preference results: every MeditronFO model is preferred over its corresponding base.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/likert_profiles.png" alt="Per-criterion Auto-MOOVE Likert profiles" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Per-criterion Likert profiles show improvements across all nine clinical evaluation dimensions, not just a single axis.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-<!-- Key Results -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Key Results</h2>
-        <div class="content has-text-justified">
-          <p>
-            Fine-tuning on the Fully Open Meditron corpus consistently improves base models across both structured and open-ended evaluation. <strong>Apertus-70B-MeditronFO</strong> reaches a 53.8% average on aggregate medical benchmarks (+6.6 over its base), establishing a new fully-open state of the art. Smaller bases benefit most, with Apertus-8B improving +12.8 points.
-          </p>
-          <p>
-            On the open-ended Auto-MOOVE protocol, validated against 204 human raters, every MeditronFO variant is preferred over its base, with adjusted win rates from 67.2% to 92%. Crucially, <strong>Gemma-3-27B-MeditronFO surpasses MedGemma</strong>, a closed-data specialist, on both HealthBench (58.0 vs 55.9) and Auto-MOOVE (preferred in 58.6% of comparisons), despite being built from a fully open, auditable pipeline.
-          </p>
+  <!-- Fully Open Meditron overview -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-3">Fully Open Meditron</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/corpus_pipeline.png" class="interpolation-image" alt="Corpus pipeline" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              <br>
+              <p>Our release includes:</p>
+              <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>A reproducible end-to-end framework spanning corpus construction, synthetic data generation, decontamination, training, and evaluation.</li>
+                <li>A structured, clinician-audited knowledge corpus normalizing eight public medical QA datasets and expanding coverage via clinician-vetted synthetic generation.</li>
+                <li><strong>Auto-MOOVE</strong>, an automated, open-ended clinical evaluation protocol validated against 204 human raters.</li>
+                <li>A family of fully open medical specialists across three model families (Apertus, OLMo-2, EuroLLM).</li>
+              </ul>
+              <p>We argue that clinically competitive medical specialization can be achieved using reproducible, auditable pipelines rather than opaque adaptation procedures, providing a reusable foundation for training and evaluating future fully open medical models.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End Key Results -->
+  </section>
 
-<!--BibTex citation -->
+  <!-- Results carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/dataset_overview.png" alt="Dataset overview" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Overview of the Fully Open Meditron datasets by record count, with synthetic data accounting for ~64% of examples.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/automoove_results.png" alt="Auto-MOOVE results" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Auto-MOOVE pairwise preference results: every MeditronFO model is preferred over its corresponding base.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/likert_profiles.png" alt="Likert profiles" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Per-criterion Likert profiles show improvements across all nine clinical evaluation dimensions.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Results -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-3">Key Results</h2>
+            <div class="content has-text-justified">
+              <ul style="list-style-type: none;">
+                <li><strong>Fully open state of the art.</strong> Fine-tuning on the Fully Open Meditron corpus consistently improves base models. Apertus-70B-MeditronFO reaches a 53.8% average on aggregate medical benchmarks (+6.6 over its base), establishing a new fully-open state of the art. Smaller bases benefit most, with Apertus-8B improving +12.8 points. <br><br></li>
+                <li><strong>Surpassing closed-data specialists.</strong> On the open-ended Auto-MOOVE protocol, validated against 204 human raters, every MeditronFO variant is preferred over its base, with adjusted win rates from 67.2% to 92%. Gemma-3-27B-MeditronFO surpasses MedGemma, a closed-data specialist, on both HealthBench (58.0 vs 55.9) and Auto-MOOVE (preferred in 58.6% of comparisons), despite being built from a fully open, auditable pipeline.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{theimerlienhard2026fullyopenmeditron,
+      <h2 class="title">BibTeX</h2>
+      Please cite our paper if you use our models, data, code, or results:
+      <br><br>
+      <pre><code>@article{theimerlienhard2026fullyopenmeditron,
   title={Fully Open Meditron: An Auditable Pipeline for Clinical LLMs},
   author={Theimer-Lienhard, Xavier and El-Amin, Mushtaha and Elhassan, Fay and Vaidya, Sahaj and Cartier-Negadi, Victor and Sasu, David and Klein, Lars and Hartley, Mary-Anne},
   journal={arXiv preprint arXiv:2605.16215},
@@ -417,25 +289,30 @@
   url={https://arxiv.org/abs/2605.16215}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+
+  <!-- Acknowledgements -->
+  <section class="section" id="Acknowledgements">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+      This work was supported under project ID #27 as part of the Swiss AI Initiative, through a grant from the ETH Domain and computational resources provided by the Swiss National Supercomputing Centre (CSCS) under the Alps infrastructure. We thank the physician review panel within the LiGHT laboratory for their clinical auditing, and the many physicians and clinical experts who contributed to the MOOVE initiative.
+    </div>
+  </section>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  </main>
-  </body>
-  </html>
+</body>
+</html>
