@@ -133,5 +133,59 @@ body {
   font-size: smaller;
 }
 
+.results-table small {
+  color: #888;
+  font-size: 0.7em;
+  margin-left: 1px;
+}
+.results-table .partition-row td {
+  background-color: #f5f7fa;
+  font-size: 0.9em;
+  color: #444;
+  border-top: 2px solid #dbdde0;
+}
+.results-table .indent {
+  padding-left: 1.5rem;
+}
+.results-table td,
+.results-table th {
+  vertical-align: middle;
+}
 
+/* checkmark / cross cells */
+.openness-table td.c {
+  text-align: center;
+  vertical-align: middle;
+}
+.openness-table td.c.yes::before {
+  content: "\f00c";              /* fa-check */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #1f9d55;                /* green */
+}
+.openness-table td.c.no::before {
+  content: "\f00d";              /* fa-xmark */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #cc4b4b;                /* red */
+}
 
+/* grouped header cells */
+.openness-table .group-head {
+  border-bottom: 2px solid #dbdde0;
+  font-size: 0.85em;
+}
+.openness-table .is-vmid {
+  vertical-align: middle;
+}
+
+/* partition + highlight rows (reuse from results table if already defined) */
+.openness-table .partition-row td {
+  background-color: #f5f7fa;
+  font-size: 0.9em;
+  color: #444;
+  border-top: 2px solid #dbdde0;
+}
+.openness-table .highlight-row {
+  background-color: #f0f6ff;     /* matches your TL;DR accent */
+}

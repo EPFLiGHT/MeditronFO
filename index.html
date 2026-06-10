@@ -191,6 +191,26 @@
     </div>
   </section>
 
+  <!-- TL;DR / Motivation -->
+<section class="hero">
+  <div class="hero-body" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="tldr-box">
+            <p class="is-size-5 has-text-weight-medium">
+              <strong>TL;DR &mdash;</strong> Most "open" medical AI models hide the data and
+              recipe they were trained on, so no one can audit what they actually learned.
+              We built the first medical AI where every step is open and it still beats
+              leading partially open systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Abstract -->
   <section class="hero">
     <div class="hero-body">
@@ -227,6 +247,172 @@
                 <li>A family of fully open medical specialists across three model families (Apertus, OLMo-2, EuroLLM).</li>
               </ul>
               <p>We argue that clinically competitive medical specialization can be achieved using reproducible, auditable pipelines rather than opaque adaptation procedures, providing a reusable foundation for training and evaluating future fully open medical models.</p>
+
+                          <!-- Medical benchmark accuracy table -->
+<div class="table-container">
+  <table class="table is-fullwidth is-narrow results-table">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th class="has-text-centered">MedMCQA</th>
+        <th class="has-text-centered">MedQA</th>
+        <th class="has-text-centered">PubMedQA</th>
+        <th class="has-text-centered">MedXpertQA</th>
+        <th class="has-text-centered">HealthBench</th>
+        <th class="has-text-centered">Avg</th>
+        <th class="has-text-centered">Gain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="partition-row">
+        <td colspan="8"><em>Fully open base</em></td>
+      </tr>
+      <tr>
+        <td>Apertus-70B-Instruct</td>
+        <td class="has-text-centered">52.43</td>
+        <td class="has-text-centered">60.64</td>
+        <td class="has-text-centered">66.80</td>
+        <td class="has-text-centered">12.33</td>
+        <td class="has-text-centered">43.72</td>
+        <td class="has-text-centered">47.18<small>±0.84</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ <u>Fully Open Meditron</u></td>
+        <td class="has-text-centered">56.32</td>
+        <td class="has-text-centered">68.58</td>
+        <td class="has-text-centered">75.20</td>
+        <td class="has-text-centered">16.90</td>
+        <td class="has-text-centered">51.86</td>
+        <td class="has-text-centered"><u><strong>53.77</strong></u><small>±0.86</small></td>
+        <td class="has-text-centered">6.59</td>
+      </tr>
+      <tr>
+        <td>OLMo-2-32B-SFT</td>
+        <td class="has-text-centered">59.10</td>
+        <td class="has-text-centered">66.22</td>
+        <td class="has-text-centered">72.00</td>
+        <td class="has-text-centered">13.02</td>
+        <td class="has-text-centered">31.03</td>
+        <td class="has-text-centered">51.52<small>±0.81</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ Fully Open Meditron</td>
+        <td class="has-text-centered">57.83</td>
+        <td class="has-text-centered">69.44</td>
+        <td class="has-text-centered">76.60</td>
+        <td class="has-text-centered">17.96</td>
+        <td class="has-text-centered">44.00</td>
+        <td class="has-text-centered">53.17<small>±0.85</small></td>
+        <td class="has-text-centered">1.65</td>
+      </tr>
+      <tr>
+        <td>EuroLLM-22B-Instruct</td>
+        <td class="has-text-centered">54.94</td>
+        <td class="has-text-centered">66.61</td>
+        <td class="has-text-centered">73.60</td>
+        <td class="has-text-centered">14.61</td>
+        <td class="has-text-centered">43.72</td>
+        <td class="has-text-centered">50.70<small>±0.84</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ Fully Open Meditron</td>
+        <td class="has-text-centered">54.79</td>
+        <td class="has-text-centered">63.16</td>
+        <td class="has-text-centered">78.00</td>
+        <td class="has-text-centered">14.61</td>
+        <td class="has-text-centered">46.22</td>
+        <td class="has-text-centered">51.36<small>±0.84</small></td>
+        <td class="has-text-centered">0.66</td>
+      </tr>
+
+      <tr class="partition-row">
+        <td colspan="8"><em>Small fully open base</em></td>
+      </tr>
+      <tr>
+        <td>Apertus-8B-Instruct</td>
+        <td class="has-text-centered">45.80</td>
+        <td class="has-text-centered">51.14</td>
+        <td class="has-text-centered">37.60</td>
+        <td class="has-text-centered">11.71</td>
+        <td class="has-text-centered">31.61</td>
+        <td class="has-text-centered">35.57<small>±0.76</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ Fully Open Meditron</td>
+        <td class="has-text-centered">48.74</td>
+        <td class="has-text-centered">58.44</td>
+        <td class="has-text-centered">75.60</td>
+        <td class="has-text-centered">13.67</td>
+        <td class="has-text-centered">45.38</td>
+        <td class="has-text-centered"><strong>48.37</strong><small>±0.84</small></td>
+        <td class="has-text-centered">12.80</td>
+      </tr>
+      <tr>
+        <td>EuroLLM-9B-Instruct</td>
+        <td class="has-text-centered">37.84</td>
+        <td class="has-text-centered">48.55</td>
+        <td class="has-text-centered">40.00</td>
+        <td class="has-text-centered">10.33</td>
+        <td class="has-text-centered">23.00</td>
+        <td class="has-text-centered">31.94<small>±0.72</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ Fully Open Meditron</td>
+        <td class="has-text-centered">46.98</td>
+        <td class="has-text-centered">49.73</td>
+        <td class="has-text-centered">67.40</td>
+        <td class="has-text-centered">11.63</td>
+        <td class="has-text-centered">37.53</td>
+        <td class="has-text-centered">42.65<small>±0.81</small></td>
+        <td class="has-text-centered">10.71</td>
+      </tr>
+
+      <tr class="partition-row">
+        <td colspan="8"><em>Open-access base</em></td>
+      </tr>
+      <tr>
+        <td>gemma-3-27b-it</td>
+        <td class="has-text-centered">62.75</td>
+        <td class="has-text-centered">76.20</td>
+        <td class="has-text-centered">74.60</td>
+        <td class="has-text-centered">16.69</td>
+        <td class="has-text-centered">57.49</td>
+        <td class="has-text-centered">57.55<small>±0.83</small></td>
+        <td class="has-text-centered">&ndash;</td>
+      </tr>
+      <tr>
+        <td class="indent">+ Fully Open Meditron</td>
+        <td class="has-text-centered">63.71</td>
+        <td class="has-text-centered">77.61</td>
+        <td class="has-text-centered">75.80</td>
+        <td class="has-text-centered">18.00</td>
+        <td class="has-text-centered">58.02</td>
+        <td class="has-text-centered">58.63<small>±0.83</small></td>
+        <td class="has-text-centered">1.08</td>
+      </tr>
+      <tr>
+        <td>MedGemma-27B</td>
+        <td class="has-text-centered">66.44</td>
+        <td class="has-text-centered">86.10</td>
+        <td class="has-text-centered">73.00</td>
+        <td class="has-text-centered">21.88</td>
+        <td class="has-text-centered">55.92</td>
+        <td class="has-text-centered"><strong>60.67</strong><small>±0.81</small></td>
+        <td class="has-text-centered">3.12</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;">
+  Medical benchmark accuracy (%). Best within partition in <strong>bold</strong>;
+  best fully open <u>underlined</u>. HealthBench uses the full benchmark with
+  Qwen3-235B-A22B as judge.
+</p>
             </div>
           </div>
         </div>
@@ -242,6 +428,8 @@
         <div class="column has-text-centered">
           <h2 class="title is-3">AutoMOOVE evaluation</h2>
           <div class="content has-text-justified">
+
+
 
             <!-- Win/Tie/Loss plots side by side -->
             <div class="columns is-centered is-vcentered">
@@ -304,6 +492,106 @@
               <ul style="list-style-type: none;">
                 <li><strong>Fully open state of the art.</strong> Fine-tuning on the Fully Open Meditron corpus consistently improves base models. Apertus-70B-MeditronFO reaches a 53.8% average on aggregate medical benchmarks (+6.6 over its base), establishing a new fully-open state of the art. Smaller bases benefit most, with Apertus-8B improving +12.8 points. <br><br></li>
                 <li><strong>Surpassing closed-data specialists.</strong> On the open-ended Auto-MOOVE protocol, validated against 204 human raters, every MeditronFO variant is preferred over its base, with adjusted win rates from 67.2% to 92%. Gemma-3-27B-MeditronFO surpasses MedGemma, a closed-data specialist, on both HealthBench (58.0 vs 55.9) and Auto-MOOVE (preferred in 58.6% of comparisons), despite being built from a fully open, auditable pipeline.</li>
+
+                <!-- Openness dimensions table -->
+<div class="table-container">
+  <table class="table is-fullwidth is-narrow openness-table">
+    <thead>
+      <tr>
+        <th rowspan="2" class="is-vmid">Model</th>
+        <th rowspan="2" class="is-vmid">Base</th>
+        <th colspan="3" class="has-text-centered group-head">Base model openness</th>
+        <th colspan="4" class="has-text-centered group-head">Medical adaptation openness</th>
+        <th rowspan="2" class="is-vmid has-text-centered">License</th>
+      </tr>
+      <tr>
+        <th class="has-text-centered">Data</th>
+        <th class="has-text-centered">Code</th>
+        <th class="has-text-centered">Weights</th>
+        <th class="has-text-centered">Data</th>
+        <th class="has-text-centered">Synth</th>
+        <th class="has-text-centered">Code</th>
+        <th class="has-text-centered">Weights</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="partition-row"><td colspan="10"><em>Closed</em></td></tr>
+      <tr>
+        <td>Med-Gemini</td><td>Gemini</td>
+        <td class="c no"></td><td class="c no"></td><td class="c no"></td>
+        <td class="c no"></td><td class="c no"></td><td class="c no"></td><td class="c no"></td>
+        <td class="has-text-centered">R</td>
+      </tr>
+
+      <tr class="partition-row"><td colspan="10"><em>Open Weights</em></td></tr>
+      <tr>
+        <td>BioMistral</td><td>Mistral</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="has-text-centered">O</td>
+      </tr>
+      <tr>
+        <td>Meditron-70B</td><td>Llama 2</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="has-text-centered">IC</td>
+      </tr>
+      <tr>
+        <td>Meditron-3</td><td>Llama 3.1</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c no"></td><td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="has-text-centered">IC</td>
+      </tr>
+      <tr>
+        <td>Aloe Beta</td><td>Llama 3.1</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="has-text-centered">R</td>
+      </tr>
+      <tr>
+        <td>MedGemma-27B</td><td>Gemma-3-27B-it</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c no"></td><td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="has-text-centered">C</td>
+      </tr>
+
+      <tr class="partition-row"><td colspan="10"><em>Partially Open</em></td></tr>
+      <tr class="highlight-row">
+        <td><strong>Gemma-3-27B-MeditronFO</strong></td><td>Gemma-3-27B-it</td>
+        <td class="c no"></td><td class="c no"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="has-text-centered">IC</td>
+      </tr>
+
+      <tr class="partition-row"><td colspan="10"><em>Fully Open</em></td></tr>
+      <tr class="highlight-row">
+        <td><strong>Apertus-70B-MeditronFO</strong></td><td>Apertus-70B</td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="has-text-centered">O</td>
+      </tr>
+      <tr class="highlight-row">
+        <td><strong>OLMo-2-32B-MeditronFO</strong></td><td>OLMo-2-32B</td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="has-text-centered">O</td>
+      </tr>
+      <tr class="highlight-row">
+        <td><strong>EuroLLM-22B-MeditronFO</strong></td><td>EuroLLM-22B</td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="c yes"></td><td class="c yes"></td><td class="c yes"></td><td class="c yes"></td>
+        <td class="has-text-centered">O</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="is-size-7 has-text-grey" style="margin-top: 0.5rem;">
+  Openness across medical LLMs. MeditronFO is the first family to satisfy every
+  dimension end-to-end. License: <strong>O</strong> = permissive open,
+  <strong>C</strong> = community/commercial with restrictions,
+  <strong>IC</strong> = inherited base-model license (adaptation permissively released),
+  <strong>R</strong> = restrictive/research-only/proprietary.
+</p>
               </ul>
             </div>
           </div>
