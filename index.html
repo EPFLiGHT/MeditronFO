@@ -132,14 +132,14 @@
             </h1>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><a href="mailto:xavier.theimer-lienhard@epfl.ch" target="_blank">Xavier Theimer-Lienhard</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Mushtaha El-Amin</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Fay Elhassan</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Sahaj Vaidya</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Victor Cartier-Negadi</a>,</span><br>
-              <span class="author-block"><a href="#" target="_blank">David Sasu</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Lars Klein</a>,</span>
-              <span class="author-block"><a href="#" target="_blank">Mary-Anne Hartley</a></span>
+              <span class="author-block"><a href="https://xaviertheimerlienhard.com/" target="_blank">Xavier Theimer-Lienhard</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Mushtaha El-Amin</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Fay Elhassan</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Sahaj Vaidya</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Victor Cartier-Negadi</a>,</span><br>
+              <span class="author-block"><a href="https://sasudavid.github.io/dsasu/" target="_blank">David Sasu</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Lars Klein</a>,</span>
+              <span class="author-block"><a href="https://www.light-laboratory.org/team" target="_blank">Mary-Anne Hartley</a></span>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -217,7 +217,7 @@
           <div class="column has-text-centered">
             <h2 class="title is-3">Fully Open Meditron</h2>
             <div class="content has-text-justified">
-              <img src="static/images/corpus_pipeline.png" class="interpolation-image" alt="Corpus pipeline" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              <img src="static/images/Fig2-MeditronFO_final-1.png" class="interpolation-image" alt="Corpus pipeline" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
               <br>
               <p>Our release includes:</p>
               <ul style="list-style-type: disc; margin-left: 20px;">
@@ -234,27 +234,64 @@
     </div>
   </section>
 
-  <!-- Results carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="static/images/dataset_overview.png" alt="Dataset overview" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Overview of the Fully Open Meditron datasets by record count, with synthetic data accounting for ~64% of examples.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/automoove_results.png" alt="Auto-MOOVE results" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Auto-MOOVE pairwise preference results: every MeditronFO model is preferred over its corresponding base.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/likert_profiles.png" alt="Likert profiles" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Per-criterion Likert profiles show improvements across all nine clinical evaluation dimensions.</h2>
+<!-- Results -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">AutoMOOVE evaluation</h2>
+          <div class="content has-text-justified">
+
+            <!-- Win/Tie/Loss plots side by side -->
+            <div class="columns is-centered is-vcentered">
+              <div class="column is-half">
+                <img src="static/images/win_tie_loss_fully_open_big_annie-1.png"
+                     class="interpolation-image"
+                     alt="Auto-MOOVE results: MeditronFO vs base models"
+                     style="width: 100%;">
+              </div>
+              <div class="column is-half">
+                <img src="static/images/win_tie_loss_medgemma_big_annie-1.png"
+                     class="interpolation-image"
+                     alt="Auto-MOOVE results: Gemma-MeditronFO vs MedGemma"
+                     style="width: 100%;">
+              </div>
+            </div>
+            <p class="has-text-centered">
+              Auto-MOOVE pairwise preference results: every MeditronFO model is preferred
+              over its corresponding base (left), and Gemma-3-27B-MeditronFO is preferred
+              over MedGemma (right).
+            </p>
+
+            <br>
+
+            <!-- Radar plots side by side -->
+            <div class="columns is-centered is-vcentered">
+              <div class="column is-half">
+                <img src="static/images/radar_apertus70b-1.png"
+                     class="interpolation-image"
+                     alt="Likert profile: Apertus-70B-MeditronFO"
+                     style="width: 100%;">
+              </div>
+              <div class="column is-half">
+                <img src="static/images/radar_gemma27b-1.png"
+                     class="interpolation-image"
+                     alt="Likert profile: Gemma-3-27B-MeditronFO"
+                     style="width: 100%;">
+              </div>
+            </div>
+            <p class="has-text-centered">
+              Per-criterion Likert profiles show improvements across all nine clinical
+              evaluation dimensions.
+            </p>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Key Results -->
   <section class="hero">
